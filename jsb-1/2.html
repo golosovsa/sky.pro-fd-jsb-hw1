@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw jsb-2</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .card__container{
+            box-sizing: border-box;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 64px;
+        }
+
+        .card {
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: flex-start;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 16px;
+        }
+
+        .card__title {
+            overflow: hidden;
+        }
+
+        .card__submit {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <article class="card__container">
+        <div class="card">
+            <h2 class="card__title" id="cardTitle">Lorem ipsum dolor sit amet.</h2>
+            <p class="card__text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus eum rerum, minima excepturi hic nobis fuga sed magni est dignissimos sint reprehenderit incidunt quo fugiat, corporis ipsam reiciendis quam. Tempora libero et qui doloremque pariatur, numquam dolorum saepe illo eveniet, eius quas quasi nisi facere quia dolore aut dignissimos! Architecto tenetur quo doloremque sit corrupti labore neque repellat veniam natus, cumque, aliquam cupiditate, ea eligendi iusto deserunt reprehenderit similique? Omnis ipsa ad perferendis aliquid corporis, rem eveniet repudiandae nemo nostrum.
+            </p>
+            <input type="text" id="inpText" class="card__input">
+            <button type="submit" class="card__submit" id="bSbmt">Применить</button>
+        </div>
+    </article>
+
+    <script>
+        const bSbmt = document.getElementById("bSbmt");
+        const cardTitle = document.getElementById("cardTitle");
+        const inpText = document.getElementById("inpText");
+
+        bSbmt.onclick = function() {
+            cardTitle.removeChild(cardTitle.lastChild);
+            cardTitle.appendChild(document.createTextNode(inpText.value));
+        }
+    </script>
+</body>
+</html>

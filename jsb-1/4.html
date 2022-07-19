@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw jsb-4</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .card__container {
+            box-sizing: border-box;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 64px;
+        }
+
+        .card {
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: flex-start;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 16px;
+        }
+
+        .card__img {
+            width: 150px;
+        }
+
+        .card__login {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <article class="card__container">
+        <div class="card">
+            <img src="" class="card__img" id="imgAva" hidden="True">
+            <button type="submit" class="card__login" id="butLogin">Войти</button>
+        </div>
+    </article>
+
+    <script>
+        imgAva = document.getElementById("imgAva");
+        butLogin = document.getElementById("butLogin");
+
+        butLogin.onclick = function() {
+            butLogin.hidden = true;
+            imgAva.src = "https://ca.slack-edge.com/T0290F60PQ8-U032P9BFSNP-b8702f10349f-512";
+            imgAva.hidden = false;
+        }
+    </script>
+
+</body>
+</html>
